@@ -28,6 +28,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/GrealishCalves/eslint-async-name.git"
+    "url": "https://github.com/GrealishCalves/eslint-plugin-async-ts.git"
   }
 }
