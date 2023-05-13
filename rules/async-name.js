@@ -32,11 +32,11 @@ module.exports = {
       
       ArrowFunctionExpression(node) {
         if (node.async) {
-          let parentFunction = node.parent;
-          while (parentFunction && parentFunction.type !== 'FunctionDeclaration' && parentFunction.type !== 'FunctionExpression') {
-            parentFunction = parentFunction.parent;
+          let variableDeclarator = node.parent;
+          while (variableDeclarator && variableDeclarator.type !== 'VariableDeclarator') {
+            variableDeclarator = variableDeclarator.parent;
           }
-          if (parentFunction && !parentFunction.id?.name?.endsWith('Async')) {
+          if (variableDeclarator && !variableDeclarator.id.name.endsWith('Async')) {
             context.report({
               node,
               message: 'Async function name should end with "Async"',
