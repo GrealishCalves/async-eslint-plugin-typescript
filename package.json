@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-async-ts",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "",
   "main": "index.js",
   "scripts": {
