@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-async-ts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,6 @@
     "prepublishOnly": "npm test && npm run version:patch",
     "publish": "npm publish && git push --follow-tags"
   },
-
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -23,7 +22,10 @@
     "eslint": "^8.40.0",
     "mocha": "^10.2.0"
   },
-  "files": ["index.js", "rules/"],
+  "files": [
+    "index.js",
+    "rules/"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/GrealishCalves/eslint-async-name.git"
