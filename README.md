@@ -2,13 +2,32 @@
 
 This repository contains custom ESLint rules for TypeScript projects to enforce best practices when working with asynchronous functions in JavaScript/TypeScript.
 
+```npm
+npm i eslint-plugin-async-ts
+```
+
+## Usage
+In your ESLint configuration file, add "async-ts" to the plugins array and specify the rules you want to enable. Here's an example configuration:
+
+```js
+module.exports = {
+  extends: [],
+  overrides: [],
+  parser: "",
+  plugins: ["async-ts"],
+  rules: {
+    "async-ts/async-name": "warn",
+  },
+};
+```
+
 ## Rules
 
 There are two custom rules included in this repository:
 
 1. **Async Function Naming:** Enforce async function names to end with "Async"
 2. **Require Await Statement:** Require an await statement in async functions
-
+---
 ### 1. Async Function Naming
 
 This rule enforces that the names of async functions should end with "Async". By following this naming convention, it's easier to understand that a function is asynchronous just by looking at its name.
@@ -96,5 +115,3 @@ const fetchDataAsync = async () => {
 }
 
 ```
-
-
